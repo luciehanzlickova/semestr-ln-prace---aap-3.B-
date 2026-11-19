@@ -1,93 +1,250 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-        
-   
-
-<!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Web o Terce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terky a cyklistika</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: rgb(230, 88, 112);
-            font-family: Arial;
+            margin: 0;
+            background-color: #fff5fa;
+            font-family: Arial, sans-serif;
+            color: #743653;
+        }
+
+        header {
+            background-color: #ff62bd;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        header p {
+            font-size: 17px;
+        }
+
+        nav {
+            background-color: #ffb0dc;
+            padding: 15px;
             text-align: center;
         }
 
-        .ctverecek {
-            background-color: rgb(245, 167, 167);
-            width: 200px;
-            padding: 20px;
-            margin: 15px auto;
-            border-radius: 15px;
-
+        nav a {
+            color: #743653;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
         }
 
-               .kolecko {
-            background-color: rgb(243, 191, 191);
-            width: 200px;
+        nav a:hover {
+            color: white;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .sekce {
+            background-color: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 3px 12px #eac5d9;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff62bd;
+            margin-top: 5px;
+        }
+
+        .fotky {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .fotky img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .zaznam {
+            background-color: #ffe0f1;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 12px;
+        }
+
+        .kolecko {
+            display: inline-block;
+            background-color: #ff62bd;
+            color: white;
+            padding: 18px;
+            border-radius: 50%;
+            margin: 8px;
+            width: 110px;
+        }
+
+        .sipka {
+            display: inline-block;
+            background-color: #ffb0dc;
+            color: white;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #ff62bd;
+            color: white;
+            text-align: center;
             padding: 20px;
-            margin: 15px auto;
-            border-radius: 15px;
-            
+            margin-top: 30px;
+        }
+
+        @media (max-width: 750px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                display: inline-block;
+            }
+
+            .fotky img {
+                height: 140px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    
+<header>
+    <h1>Terky a cyklistika 🚴‍♀️</h1>
+    <p>Její zážitky, fotky a zkušenosti z cyklistiky</p>
+</header>
 
-    <h1>Terky a ciklistika </h1>
+<nav>
+    <a href="#fotky">Fotky</a>
+    <a href="#zkusenosti">Zkušenosti</a>
+    <a href="#doba">Jak dlouho jezdím</a>
+    <a href="#sjezdovky">Sjezdovky</a>
+    <a href="#zavody">Závody a akce</a>
+</nav>
 
- <div class="ctverecek">
+<main>
+
+    <section class="sekce" id="fotky">
         <h2>Terky fotky</h2>
-       <img src= "./kolo1.jpg" alt="Kolo" width="500">
- <img src= "./hory.jpg" alt="kolo" width="500">
-<img src= "./les.jpg" alt="Kolo" width="500">
- <img src= "./zapad sluncde.jpg" alt="Kolo" width="500">
- <img src= "./zvod.jpg" alt="Kolo" width="500">
-    </div>
-        
- <div class="ctverecek">
+
+        <div class="fotky">
+            <img src="./kolo1.jpg" alt="Kolo">
+            <img src="./hory.jpg" alt="Hory">
+            <img src="./les.jpg" alt="Les">
+            <img src="./zapad sluncde.jpg" alt="Západ slunce">
+            <img src="./zvod.jpg" alt="Závod">
+        </div>
+    </section>
+
+    <section class="sekce" id="zkusenosti">
         <h2>Zkušenosti</h2>
-        <p>Tady budou zkušenosti </p>
-         </div>
 
-    </div>
-    <div class="ctverecek">
-        <h2>Jak dlouho to terka dělá?</h2>
+        <div class="zaznam">
+            <h3>Její zkušenosti</h3>
+            <p>Tady budou její zkušenosti s cyklistikou.</p>
+        </div>
 
-      
-        <div class="kolecko">2020 - 2026</div>
-    <div class="kolecko">První jízda 2020</div>
-    <div class="kolecko">poslední jízda 2026</div>
-    
-         </div>
-</div>
+        <div class="zaznam">
+            <h3>Co jsem se naučila</h3>
+            <p>Tady můžeš napsat, co ses během ježdění naučila.</p>
+        </div>
 
-<div class="ctverecek">
-        <h2>Sjezdovky které sjela</h2>
-        <p>Tady budou Sjezdovky které sjela.</p>
-    </div>
+        <div class="zaznam">
+            <h3>Její zážitky</h3>
+            <p>Tady budou její nejlepší zážitky.</p>
+        </div>
+    </section>
 
- 
+    <section class="sekce" id="doba">
+        <h2>Jak dlouho to Terka dělá?</h2>
 
-          <div class="ctverecek">
-        <h2>akce/závody</h2>
-        <p>Tady budou akce/závody </p>
-         </div>
-</div>
+        <div class="sipka">2020</div>
+         <div class="sipka">202</div>
+          <div class="sipka">2022</div>
+        <div class="sipka">2023</div>
+         <div class="sipka">2024</div>
+          <div class="sipka">2025</div>
+        <div class="sipka">2026</div>
+
+        <div class="zaznam">
+            <h3>První jízda</h3>
+            <p>2020</p>
+        </div>
+
+        <div class="zaznam">
+            <h3>Poslední jízda</h3>
+            <p>2026</p>
+        </div>
+    </section>
+
+    <section class="sekce" id="sjezdovky">
+        <h2>Sjezdovky, které sjela</h2>
+
+        <div class="kolecko">1</div>
+        <div class="kolecko">2</div>
+        <div class="kolecko">3</div>
+
+        <p>Tady budou sjezdovky, které Terka sjela.</p>
+    </section>
+
+    <section class="sekce" id="zavody">
+        <h2>Závody a akce</h2>
+
+        <div class="zaznam">
+            <h3>První závod</h3>
+            <p>Tady bude první závod.</p>
+        </div>
+
+        <div class="zaznam">
+            <h3>Další akce</h3>
+            <p>Tady budou další závody a akce.</p>
+        </div>
+
+        <div class="zaznam">
+            <h3>Nejlepší zážitky</h3>
+            <p>Tady budou nejlepší zážitky ze závodů.</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Terky a cyklistika </p>
+</footer>
+
 </body>
 </html>
-</body>
-</html>
+
+
