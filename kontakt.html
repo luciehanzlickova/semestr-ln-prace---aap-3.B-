@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Napiš Terce</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f8f5f1;
+    font-family: Arial, sans-serif;
+    color: #443b39;
+}
+
+header {
+    background: #713b46;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    color: #eadde0;
+}
+
+main {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 15px;
+}
+
+.karta {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #53333b0d;
+}
+
+h2 {
+    color: #713b46;
+    text-align: center;
+}
+
+.popis {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 13px;
+    margin-top: 8px;
+    border: 1px solid #d9c8c6;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background: #fdfcfa;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #713b46;
+}
+
+button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #713b46;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #925965;
+}
+
+#vysledek {
+    color: #713b46;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.zpet {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #713b46;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.zpet:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #713b46;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+    .karta {
+        padding: 22px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Napiš Terce ✉️</h1>
+    <p>Budu ráda za každou zprávu!</p>
+</header>
+
+<main>
+
+<div class="karta">
+
+    <h2>Kontaktní formulář</h2>
+
+    <p class="popis">
+        Máš otázku, chceš se na něco zeptat
+        nebo mi jen něco vzkázat?
+        Vyplň formulář níže.
+    </p>
+
+    <form onsubmit="odeslatZpravu(event)">
+
+        <label for="jmeno">Jméno:</label>
+        <input
+            type="text"
+            id="jmeno"
+            placeholder="Zadej své jméno"
+            required
+        >
+
+        <label for="email">E-mail:</label>
+        <input
+            type="email"
+            id="email"
+            placeholder="Zadej svůj e-mail"
+            required
+        >
+
+        <label for="tema">O čem chceš napsat?</label>
+        <select id="tema" required>
+            <option value="">Vyber téma</option>
+            <option>Cyklistika</option>
+            <option>Závody</option>
+            <option>Fotky</option>
+            <option>Otázka pro Terku</option>
+            <option>Jiné</option>
+        </select>
+
+        <label for="zprava">Tvoje zpráva:</label>
+        <textarea
+            id="zprava"
+            rows="6"
+            placeholder="Napiš svou zprávu..."
+            required
+        ></textarea>
+
+        <button type="submit">
+            Odeslat zprávu
+        </button>
+
+    </form>
+
+    <p id="vysledek"></p>
+
+    <a href="index.html" class="zpet">
+        ← Zpět na hlavní stránku
+    </a>
+
+</div>
+
+</main>
+
+<footer>
+    <p>© 2026 Terka a cyklistika</p>
+</footer>
+
+<script>
+function odeslatZpravu(event) {
+
+    event.preventDefault();
+
+    let jmeno = document.getElementById("jmeno").value;
+
+    document.getElementById("vysledek").textContent =
+        "Děkuji za zprávu, " + jmeno +
+        "! Formulář byl úspěšně vyplněn.";
+
+    event.target.reset();
+}
+</script>
+
+</body>
+</html>
