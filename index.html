@@ -1,255 +1,460 @@
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terky a cyklistika</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terka a cyklistika</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            background-color: #fff5fa;
-            font-family: Arial, sans-serif;
-            color: #743653;
-        }
+body {
+    margin: 0;
+    background: #f8f5f1;
+    font-family: Arial, sans-serif;
+    color: #443b39;
+    line-height: 1.6;
+}
 
-        header {
-            background-color: #ff62bd;
-            color: white;
-            text-align: center;
-            padding: 35px 15px;
-        }
+/* HLAVIČKA */
 
-        header h1 {
-            margin: 0;
-            font-size: 38px;
-        }
+header {
+    background: #713b46;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
 
-        header p {
-            font-size: 17px;
-        }
+header h1 {
+    margin: 0;
+    font-size: 38px;
+    letter-spacing: 1px;
+}
 
-        nav {
-            background-color: #ffb0dc;
-            padding: 15px;
-            text-align: center;
-        }
+header p {
+    color: #eadde0;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
 
-        nav a {
-            color: #743653;
-            text-decoration: none;
-            margin: 10px;
-            font-weight: bold;
-        }
+.kontakt-odkaz {
+    display: inline-block;
+    background: #f5eee9;
+    color: #713b46;
+    text-decoration: none;
+    padding: 11px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        nav a:hover {
-            color: white;
-        }
+.kontakt-odkaz:hover {
+    background: white;
+    transform: translateY(-2px);
+}
 
-        main {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 15px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
+/* MENU */
 
-        .sekce {
-            background-color: white;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 3px 12px #eac5d9;
-            text-align: center;
-        }
+nav {
+    background: white;
+    padding: 17px 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px #0000000a;
+}
 
-        h2 {
-            color: #ff62bd;
-            margin-top: 5px;
-        }
+nav a {
+    color: #713b46;
+    text-decoration: none;
+    margin: 8px 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
 
-        .fotky {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
+nav a:hover {
+    color: #a16a74;
+}
 
-        .fotky img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 12px;
-        }
+/* HLAVNÍ OBSAH */
 
-        .zaznam {
-            background-color: #ffe0f1;
-            padding: 15px;
-            margin: 12px 0;
-            border-radius: 12px;
-        }
+main {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
 
-        .kolecko {
-            display: inline-block;
-            background-color: #ff62bd;
-            color: white;
-            padding: 18px;
-            border-radius: 50%;
-            margin: 8px;
-            width: 110px;
-        }
+.sekce {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #53333b0d;
+    text-align: center;
+}
 
-        .sipka {
-            display: inline-block;
-            background-color: #ffb0dc;
-            color: white;
-            padding: 12px 20px;
-            margin: 5px;
-            border-radius: 8px;
-        }
+h2 {
+    color: #713b46;
+    margin-top: 0;
+    margin-bottom: 22px;
+}
 
-        footer {
-            background-color: #ff62bd;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
+h3 {
+    color: #713b46;
+}
 
-        @media (max-width: 750px) {
-            main {
-                grid-template-columns: 1fr;
-            }
+/* FOTKY */
 
-            header h1 {
-                font-size: 28px;
-            }
+.fotky {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
 
-            nav a {
-                display: inline-block;
-            }
+.fotky img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
 
-            .fotky img {
-                height: 140px;
-            }
-        }
-    </style>
+.fotky img:hover {
+    transform: scale(1.03);
+}
+
+/* ZÁZNAMY */
+
+.zaznam {
+    background: #f7f1ef;
+    padding: 16px;
+    margin: 13px 0;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.zaznam h3 {
+    margin-top: 0;
+}
+
+.zaznam p {
+    margin-bottom: 0;
+}
+
+/* ROKY */
+
+.sipka {
+    display: inline-block;
+    background: #713b46;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+/* SJEZDOVKY */
+
+.kolecko {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #713b46;
+    color: white;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* TABULKA */
+
+.tabulka {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.tabulka th {
+    background: #713b46;
+    color: white;
+    padding: 13px 8px;
+}
+
+.tabulka td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #e9dcda;
+}
+
+.tabulka tr:nth-child(even) {
+    background: #f7f1ef;
+}
+
+.tabulka tr:nth-child(odd) {
+    background: #fff;
+}
+
+/* PATIČKA */
+
+footer {
+    background: #713b46;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 35px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* MOBILNÍ ZOBRAZENÍ */
+
+@media (max-width: 750px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    .fotky img {
+        height: 145px;
+    }
+
+    .sekce {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .tabulka {
+        font-size: 11px;
+    }
+
+    .tabulka th,
+    .tabulka td {
+        padding: 7px 3px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Terky a cyklistika 🚴‍♀️</h1>
-    <p>Její zážitky, fotky a zkušenosti z cyklistiky</p>
+    <h1>Terka a cyklistika </h1>
+    <p>Moje zážitky, fotografie a zkušenosti ze světa cyklistiky</p>
+
+    <a href="kontakt.html" class="kontakt-odkaz">
+        Napsat Terce →
+    </a>
 </header>
 
 <nav>
     <a href="#fotky">Fotky</a>
     <a href="#zkusenosti">Zkušenosti</a>
-    <a href="#doba">Jak dlouho jezdí</a>
+    <a href="#doba">Jak dlouho jezdím</a>
     <a href="#sjezdovky">Sjezdovky</a>
     <a href="#zavody">Závody a akce</a>
+    <a href="#vysledky">Výsledky</a>
 </nav>
 
 <main>
 
-    <section class="sekce" id="fotky">
-        <h2>Terky fotky</h2>
+<!-- FOTKY -->
 
-        <div class="fotky">
-            <img src="./kolo1.jpg" alt="Kolo">
-            <img src="./hory.jpg" alt="Hory">
-            <img src="./les.jpg" alt="Les">
-            <img src="./zapad sluncde.jpg" alt="Západ slunce">
-            <img src="./zvod.jpg" alt="Závod">
-        </div>
-    </section>
+<section class="sekce" id="fotky">
+    <h2>Moje fotografie </h2>
 
-    <section class="sekce" id="zkusenosti">
-        <h2>Zkušenosti</h2>
+    <div class="fotky">
+        <img src="./kolo1.jpg" alt="Kolo">
+        <img src="./hory.jpg" alt="Hory">
+        <img src="./les.jpg" alt="Les">
+        <img src="./zapad sluncde.jpg" alt="Západ slunce">
+        <img src="./zvod.jpg" alt="Závod">
+    </div>
+</section>
 
-        <div class="zaznam">
-            <h3>Její zkušenosti</h3>
-            <p>Terka se cyklistice věnuje už několik let. Za tu dobu získala spoustu zkušeností, naučila se lépe ovládat kolo a zvládat i náročnější terény. Každá jízda ji posouvá dál a učí ji něco nového..</p>
-        </div>
+<!-- ZKUŠENOSTI -->
 
-        <div class="zaznam">
-            <h3>Co jsem se naučila</h3>
-            <p>Během ježdění se Terka naučila lépe zatáčet, brzdit, jezdit v kopcích a zvládat rychlé sjezdy. Cyklistika ji naučila také trpělivosti, odvaze a vytrvalosti.</p>
-        </div>
+<section class="sekce" id="zkusenosti">
+    <h2>Moje zkušenosti</h2>
 
-        <div class="zaznam">
-            <h3>Její zážitky</h3>
-            <p>Terka má nejraději krásné výlety do přírody, jízdu v horách a překonávání vlastních možností. Každá vyjížďka jí přináší nové zážitky a vzpomínky.</p>
-        </div>
-    </section>
+    <div class="zaznam">
+        <h3>Moje začátky</h3>
+        <p>Terka se cyklistice věnuje už několik let. Za tu dobu získala spoustu zkušeností, naučila se lépe ovládat kolo a zvládat i náročnější terény. Každá jízda ji posouvá dál a učí ji něco nového.</p>
+    </div>
 
-    <section class="sekce" id="doba">
-        <h2>Jak dlouho to Terka dělá?</h2>
+    <div class="zaznam">
+        <h3>Co jsem se naučila</h3>
+        <p>Během ježdění se Terka naučila lépe zatáčet, brzdit, jezdit v kopcích a zvládat rychlé sjezdy. Cyklistika ji naučila také trpělivosti, odvaze a vytrvalosti.</p>
+    </div>
 
-        <p>Terka začala s cyklistikou v roce 2020. Od té doby ji kolo stále baví a každý rok se snaží zlepšovat. Za těchto šest let zažila spoustu krásných jízd, výletů a dobrodružství. Cyklistika se stala jednou z jejích oblíbených aktivit. <p>
+    <div class="zaznam">
+        <h3>Moje zážitky</h3>
+        <p>Terka má nejraději krásné výlety do přírody, jízdu v horách a překonávání vlastních možností. Každá vyjížďka jí přináší nové zážitky a vzpomínky.</p>
+    </div>
+</section>
 
+<!-- JAK DLOUHO JEZDÍM -->
+
+<section class="sekce" id="doba">
+    <h2>Jak dlouho se věnuji cyklistice?</h2>
+
+    <p>Terka začala s cyklistikou v roce 2020. Od té doby ji kolo stále baví a každý rok se snaží zlepšovat. Za těchto šest let zažila spoustu krásných jízd, výletů a dobrodružství.</p>
+
+    <div>
         <div class="sipka">2020</div>
-         <div class="sipka">2021</div>
-          <div class="sipka">2022</div>
+        <div class="sipka">2021</div>
+        <div class="sipka">2022</div>
         <div class="sipka">2023</div>
-         <div class="sipka">2024</div>
-          <div class="sipka">2025</div>
+        <div class="sipka">2024</div>
+        <div class="sipka">2025</div>
         <div class="sipka">2026</div>
+    </div>
 
-        <div class="zaznam">
-            <h3>První jízda</h3>
-            <p>2020</p>
-        </div>
+    <div class="zaznam">
+        <h3>První jízda</h3>
+        <p>2020</p>
+    </div>
 
-        <div class="zaznam">
-            <h3>Poslední jízda</h3>
-            <p>2026</p>
-        </div>
-    </section>
+    <div class="zaznam">
+        <h3>Poslední jízda</h3>
+        <p>2026</p>
+    </div>
+</section>
 
-    <section class="sekce" id="sjezdovky">
-        <h2>Sjezdovky, které sjela</h2>
+<!-- SJEZDOVKY -->
 
-        <div class="kolecko">1</div>
-        <div class="kolecko">2</div>
-       
+<section class="sekce" id="sjezdovky">
+    <h2>Sjezdovky, které jsem sjela</h2>
 
-        <p>Terka už sjela několik zajímavých sjezdovek. Mezi ně patří například:
-        <p>Špičák – červená sjezdovka</p>
-        </p>Zadov – červená sjezdovka<p>
-        </p>Terka se nebojí nových výzev a ráda zkouší stále náročnější sjezdovky. Každou další jízdou získává nové zkušenosti a zlepšuje své schopnosti.</p>
-    </section>
+    <div class="kolecko">1</div>
+    <div class="kolecko">2</div>
 
-    <section class="sekce" id="zavody">
-        <h2>Závody a akce</h2>
+    <p>Terka už sjela několik zajímavých sjezdovek. Mezi ně patří například:</p>
 
-        <div class="zaznam">
-            <h3>První závod</h3>
-            <p>Její první závod byl určitě velkým zážitkem. I když mohla být trochu nervózní, získala díky němu nové zkušenosti.</p>
-        </div>
+    <div class="zaznam">
+        <p>🎿 Špičák – červená sjezdovka</p>
+    </div>
 
-        <div class="zaznam">
-            <h3>Další akce</h3>
-            <p>Terka se ráda účastní různých cyklistických akcí, výletů a společných jízd. Díky tomu poznává nová místa a zažívá spoustu dobrodružství.
+    <div class="zaznam">
+        <p>🎿 Zadov – červená sjezdovka</p>
+    </div>
 
-</p>
-        </div>
+    <p>Terka se nebojí nových výzev a ráda zkouší stále náročnější sjezdovky. Každou další jízdou získává nové zkušenosti.</p>
+</section>
 
-        <div class="zaznam">
-            <h3>Nejlepší zážitky</h3>
-            <p>Mezi její nejlepší zážitky patří jízdy v přírodě, krásné výhledy z hor a chvíle strávené na kole. Na cyklistice má nejraději svobodu, zábavu a překonávání vlastních limitů.</p>
-        </div>
-    </section>
+<!-- ZÁVODY -->
+
+<section class="sekce" id="zavody">
+    <h2>Závody a akce</h2>
+
+    <div class="zaznam">
+        <h3>První závod</h3>
+        <p>Její první závod byl určitě velkým zážitkem. I když mohla být trochu nervózní, získala díky němu nové zkušenosti.</p>
+    </div>
+
+    <div class="zaznam">
+        <h3>Další akce</h3>
+        <p>Terka se ráda účastní různých cyklistických akcí, výletů a společných jízd. Díky tomu poznává nová místa a zažívá spoustu dobrodružství.</p>
+    </div>
+
+    <div class="zaznam">
+        <h3>Nejlepší zážitky</h3>
+        <p>Mezi její nejlepší zážitky patří jízdy v přírodě, krásné výhledy z hor a chvíle strávené na kole. Na cyklistice má nejraději svobodu, zábavu a překonávání vlastních limitů.</p>
+    </div>
+</section>
+
+<!-- VÝSLEDKY -->
+
+<section class="sekce" id="vysledky">
+    <h2>Moje závody a časy</h2>
+
+    <p>Přehled závodů, kterých se Terka zúčastnila.</p>
+
+    <table class="tabulka">
+        <tr>
+            <th>Rok</th>
+            <th>Datum</th>
+            <th>Závod</th>
+            <th>Čas</th>
+            <th>Místo</th>
+        </tr>
+
+        <tr>
+            <td>2021</td>
+            <td>15. 5.</td>
+            <td>Jarní MTB</td>
+            <td>42:35</td>
+            <td>8.</td>
+        </tr>
+
+        <tr>
+            <td>2022</td>
+            <td>12. 6.</td>
+            <td>Šumavský závod</td>
+            <td>38:42</td>
+            <td>5.</td>
+        </tr>
+
+        <tr>
+            <td>2023</td>
+            <td>20. 8.</td>
+            <td>Lesní MTB</td>
+            <td>35:18</td>
+            <td>3.</td>
+        </tr>
+
+        <tr>
+            <td>2024</td>
+            <td>10. 5.</td>
+            <td>Bike Challenge</td>
+            <td>32:50</td>
+            <td>4.</td>
+        </tr>
+
+        <tr>
+            <td>2025</td>
+            <td>17. 6.</td>
+            <td>Horský závod</td>
+            <td>30:24</td>
+            <td>2.</td>
+        </tr>
+
+        <tr>
+            <td>2026</td>
+            <td>23. 8.</td>
+            <td>Velká MTB výzva</td>
+            <td>28:45</td>
+            <td>1.</td>
+        </tr>
+    </table>
+
+    <div class="zaznam">
+        <h3>Nejlepší výsledek </h3>
+        <p>Rok 2026 – 1. místo na Velké MTB výzvě!</p>
+    </div>
+</section>
 
 </main>
 
 <footer>
-    <p>© 2026 Terky a cyklistika </p>
+    <p>© 2026 Terka a cyklistika</p>
+    <p>Děkuji za návštěvu mé stránky!</p>
 </footer>
 
 </body>
-</html> 
+</html>
